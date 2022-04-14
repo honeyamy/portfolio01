@@ -1,0 +1,166 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*css 초기화*/
+*{margin:0; line-height:1.2; vertical-align:top; padding:0; font-family:inherit; letter-spacing:-0.25px; font-size:inherit; box-sizing:border-box;}
+html{font-family:'GmarketSansLight', sans-serif; letter-spacing:-0.5px; font-size:20px;}
+body{
+	width:100%;
+	height:100%;
+	font-size:1rem;
+	font-family:'GmarketSansLight', sans-serif;
+	/*background:linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(238,238,238,0.5) 100%)*/
+	background:#ffd066;
+	background: linear-gradient(135deg, #ffd066 0%,#ffc74f 100%);
+	color:#333;
+}
+a{color:#333; text-decoration:none;}
+li{list-style:none;}
+h1, h2, h3, h4, h5, h6 {
+	font-size:inherit;
+	font-weight:normal;
+}
+section{display:block;}
+input{font-size:inherit; font-family:'GmarketSansLight';}
+input::placeholder{font-size:1rem; color:#ccc; font-family:'GmarketSansLight';}
+.fixed:before{
+	content:'';
+	display:block;
+	clear:both;
+}
+
+/*css 시작*/
+
+.wrapper{
+	margin:0 auto;
+	padding-top:80px;
+	height:100vh;
+	box-sizing:border-box;
+	width:1380px;
+}
+h2{font-size:1.3rem; font-family:'GmarketSansBold'; text-align:center; margin-bottom:17px;}
+section{
+	box-shadow:15px 20px 0px 0px #fdbc5d;
+	float:left;
+	width:400px;
+	position:relative;
+	height:765px;
+	padding:40px 20px;
+	margin-right:40px;
+	background:#fff;
+}
+section:nth-child(3){
+	margin-right:0;
+	min-width:500px;
+}
+.list_box{
+	border:1px solid #ccc;
+	height:430px;
+	overflow-y:auto;
+	padding:5px 0;
+	width:100%;
+}
+li{height:35px; line-height:35px;}
+.list_box li{
+	cursor:pointer;
+	padding:0 10px;
+	height:37px;
+	line-height:37px;
+}
+.list_box li:hover{
+	background:#fffdeb;
+	font-family:'GmarketSansMedium';
+}
+
+#selSales{height:637px;}
+#selSales li p:first-child{width:32.5%;}
+#selSales li p:nth-child(2){width:36%;}
+#selOrder li p:first-child{width:53%;}
+.list_box li p, .input_box li p{float:left; margin-right:7px; height:37px; line-height:37px;}
+.input_box{margin-top:20px; width:100%;}
+.input_box li{margin-bottom:10px;}
+.input_box li:last-child{margin-bottom:20px;}
+.input_box li p:nth-child(2){width:75%; border-bottom:1px solid #ccc;}
+.input_box li p input{outline:none; width:100%; height:100%; border:none; text-align:right; font-family: 'GmarketSansMedium';}
+.kmoney{padding-right:22px; position:relative;}
+.kmoney:before{content:'원'; position:absolute; right:0;}
+.input_box li p input:focus{border:none;}
+.input_box li p:nth-child(2):focus{border:2px solid #fdbc5d; box-sizing:border-box; border-radius:5px;}
+.list_box li p:last-child, .input_box li p:last-child{float:right; margin-right:0;}
+.form_menulist li div{float:left;}
+button{position:relative; z-index:2; border:0; overflow:hidden; padding:0 17px; background:#fff; height:42px;color:#333; border-radius:100px;
+	cursor:pointer; transition:0.3s;}
+.btn_bg{font-family: 'GmarketSansMedium';}
+.btn_bg:hover, .btn_bg:nth-child(even):hover, .btn_bg:nth-child(odd):hover{color:#fff; font-weight:bold;}
+section:nth-child(2) button{margin-top:45px;}
+.btn_bg:nth-child(even){float:left; color:#ccc;}
+.btn_bg:nth-child(odd){float:right; color:#ff9900;}
+.btn_bg:before{content:''; display:block; transition:0.3s; position:absolute; right:100%; bottom:100%; border-radius:50px;
+	background:#ff9900; width:30px; height:30px; z-index:1; }
+.btn_bg:after{content:''; display:block; box-sizing:border-box; border:3px solid #ff9900; position:absolute; left:0; top:0;
+	width:100%; height:100%; border-radius:100px;}
+.btn_bg:nth-child(even):before{background:#ff5200;}
+.btn_bg:nth-child(even):after{border:3px solid #ccc;}
+
+.btn_bg:hover:before{transform:scale(10);}
+.btn_bg span{line-height:45px; position:relative; z-index:2;}
+#btnMenu, #btnMenu2{font-size:16px; height:auto; line-height:1.2; position:absolute; top:15px; right:20px;
+	background:rgba(255,255,255,0.5); border-radius:0; border:1px solid #ccc; color:#aaa; padding:4px;
+	letter-spacing:-0.5px; transition:0.3s;}
+#btnMenu:hover, #btnMenu2:hover{font-family: 'GmarketSansMedium'; color:#666;}
+.ui-widget{font-family:inherit; font-size:inherit;}
+#dlgMenu2 h2 span {font-family:'GmarketSansLight';}
+
+
+/*팝업 css*/
+.ui-widget-header{background:#ff9900; border:none;}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{font-family:'GmarketSansMedium'; font-size:inherit;}
+.ui-dialog .ui-dialog-title{font-family: 'GmarketSansBold'; font-size:1.25rem; line-height:1; padding:4px 0; color:#fff;}
+.ui-widget.ui-widget-content{border:none; box-shadow:2px 2px 13px 8px rgba(0,0,0,0.1);}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+	border:none;
+	background:#fff;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus{
+	border:none;
+	background:#fff;
+}
+#dlgMenu section, #dlgMenu2 section{
+	box-shadow:none;
+	padding:0;
+	width:760px;
+	min-width:760px;
+	margin-right:0;
+	margin:0 auto;
+	height:500px;
+}
+#dlgMenu > section > div, #dlgMenu2 > section > div {float:left; width:46%;}
+#dlgMenu section > div:first-child, #dlgMenu2 section div:first-child{height:100%; width:52%; margin-right:2%;}
+#selMenu1{width:390px; height:100%;}
+#selMenu1 li p:first-child{width:30px;}
+#total_menu li p:first-child{width:220px;}
+.ui-dialog .ui-dialog-content{padding:20px;}
+.ui-dialog .ui-dialog-titlebar-close{right:20px;}
+/*팝업 가이드*/
+.menu_info{margin-bottom:54px;}
+.menu_info h3{padding:5px 10px; border:1px solid #ccc; display:inline-block; position:relative; left:50%; transform:translateX(-50%);}
+.menu_info dt{font-weight:bold; font-family:'GmarketSansBold'; color:#ff9900; border-bottom:2px solid #ff9900; margin-bottom:10px;}
+.menu_info dd{margin-bottom:15px;}
+.menu_info dd strong{color:#000;}
+.menu_info dd span{display:block; color:#999; font-size:0.9rem; line-height:1.4;}
